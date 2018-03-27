@@ -7,14 +7,18 @@ import CartItem from './CartItem';
 
 class App extends Component {
   render() {
+
+    let copyrightYear = 2018;
+
     return (
       <div>
         <CartHeader />
         <CartItem />
-        <CartFooter />
+        <CartFooter year={copyrightYear}/>
 
       </div>
     );
+    
   }
 }
 
