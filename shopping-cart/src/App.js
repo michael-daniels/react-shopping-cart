@@ -4,6 +4,7 @@ import './App.css';
 import CartHeader from './CartHeader';
 import CartFooter from './CartFooter';
 import CartItems from './CartItems';
+import AddItemForm from './AddItemForm'
 
 class App extends Component {
   render() {
@@ -14,11 +15,15 @@ class App extends Component {
       { id: 2, product: { id: 41, name: 'Heavy Duty Concrete Plate', priceInCents: 499 }, quantity: 2 },
       { id: 3, product: { id: 42, name: 'Intelligent Paper Knife', priceInCents: 1999 }, quantity: 1 },
     ];
+    const addItem = () => {
+      alert("Heard Event")
+    }
 
     return (
       <div>
         <CartHeader />
         <CartItems cartItems = {cartItemsList} />
+        <AddItemForm addItem = {addItem}/>
         <CartFooter year={copyrightYear} />
 
       </div>
